@@ -1,0 +1,25 @@
+{
+  "name": "beckon",
+  "version": "0.0.1",
+  "description": "beckon ======",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chapel/beckon.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chapel/beckon/issues"
+  },
+  "homepage": "https://github.com/chapel/beckon",
+  "devDependencies": {
+    "lab": "^1.7.1"
+  },
+  "dependencies": {
+    "newless": "^0.1.1"
+  }
+}
