@@ -46,13 +46,15 @@ var callback = Beckon(function (err, file) {
     return createFile(fileName, data, this.done);
   }
 
+  this.file = file;
+
   validateFile(file, data, this.next);
 });
 
 // Not called if the file does not exist, goes to done instead
 callback.next(function (err) {
   if (err) {
-    return updateFile(file, data, this.next);
+    return updateFile(this.file, data, this.next);
   }
 
   this.next();
