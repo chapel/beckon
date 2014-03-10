@@ -1,5 +1,4 @@
-beckon
-======
+# Beckon
 
 Callback based program flow with built in context. Use like a callback, but with the power of flow like programming (similar to promises).
 
@@ -23,14 +22,13 @@ callback('foo');
 // => 'foo'
 ```
 
-Methods
--------
+## Methods
 
-Beckon(fn)
+### Beckon(fn)
 
 Creates the callback flow, exposing ```callback.next``` which can be used to define the functions in the flow.
 
-callback.next([name], fn)
+### callback.next([name], fn)
 
 Adds provided function to the callbacks prototype. Pass in an optional name that can be used to call the function directly bypassing any functions between the named function and the one calling it.
 
@@ -67,10 +65,10 @@ callback.next('done', function () {
 openFile(file, callback);
 ```
 
-callback([args])
+### callback([args])
 
 Starts the callback flow, by first calling the initial function passed into Beckon, and flowing through as ```this.next``` or ```this.functionName``` is called.
 
-this.next([arguments])
+### this.next([arguments])
 
 Is used to call the next function in the callback flow, even named functions are included in the flow.
